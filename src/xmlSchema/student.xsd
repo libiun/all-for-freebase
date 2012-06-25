@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xs:element name="学生名册" type="myType"/>
+        
+    <xs:complexType name="myType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="学生">
+                <xs:complexType>
+                    <xs:group ref="xuesheng"/>
+                    <xs:attribute name="学号" type="xs:int"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!--  group of elements in xuesheng  -->
+    <xs:group name="xuesheng">
+        <xs:sequence>
+            <xs:element name="姓名" type="xs:string"/> 
+            <xs:element name="性别" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="男"/>
+                        <xs:enumeration value="女"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+                            
+            <xs:element name="年龄">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="150"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>                
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

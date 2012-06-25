@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<purchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="test11.xsd" 
+orderDate="2011-12-25">
+    <!-- sequence: shipTo billTo comment items  -->
+    <shipTo country="US">
+        <name>chengdu</name>
+        <street>xuefu lu</street>
+        <city>sex city</city>
+        <state>who know</state>
+        <zip>12</zip>
+    </shipTo>
+    
+    <billTo country="US">
+        <name>chengdu</name>
+        <street>xuefu lu</street>
+        <city>sex city</city>
+        <state>who know</state>
+        <zip>12</zip>
+    </billTo>
+        
+    <comment>something and don't occur</comment>
+    <items>
+        <item partNum="2">
+            <productName></productName>
+            <quantity>99</quantity>
+            <USPrice>56</USPrice>
+            <comment>can't dont occur</comment>
+            <shipDate>2012-02-25</shipDate>
+        </item>
+        <item partNum="10">
+            <productName></productName>
+            <quantity>99</quantity>
+            <USPrice>56</USPrice>
+            <comment>can't dont occur</comment>
+            <shipDate>2012-02-25</shipDate>
+        </item>
+    </items>
+</purchaseOrder>

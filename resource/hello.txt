@@ -1,0 +1,5 @@
+1234567890
+this is a txt for testing FileInputStream class.
+this is second line;
+hello you.
+试试中文。

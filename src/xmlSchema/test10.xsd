@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:complexType name="myType">
+            <!-- sequence 把整个序列看成一个元素，个数限制针对这整个元素来讲 -->
+		<xs:sequence minOccurs="1" maxOccurs="3">
+			<xs:element name="hello" type="xs:string"/>
+			<xs:element name="world" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+        <!-- 定义了两个元素，不确定哪个为根元素，推断包含最多层次的为根 -->
+	<xs:element name="helloworld" type="myType" />
+	<xs:element name="welcome" type="myType"/>
+</xs:schema>
